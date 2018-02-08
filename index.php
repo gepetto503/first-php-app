@@ -7,30 +7,10 @@
   require_once('includes/functions.php');
   include('includes/guitar-arrays.php');
 
-  //set this variable to true if input is an integer, false if it's something else
-  $product_id = filter_input(INPUT_GET, 'productid', FILTER_VALIDATE_INT);
-
-  //if the input wasn't an integer, (also the case if you don't put anything in the request), stop everything
-  if ($product_id == false) {
-    die();
-  }
 
 ?>
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1>Product ID<h1>
-          <p><?= $product_id;?></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <?php
-            add(1,2);
-          ?>
-        </div>
-      </div>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1 class="mt-5">For Each Loop</h1>

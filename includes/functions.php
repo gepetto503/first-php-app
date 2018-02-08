@@ -22,7 +22,8 @@ function pluck($arr, $key) {
   }
 
   function authenticate_user($email, $password) {
-      return $email == USER_NAME && $password == PASSWORD;
+    //this will return a true or false value
+    return $email == USER_NAME && $password == PASSWORD;
   }
 
   function redirect($url) {
@@ -34,8 +35,8 @@ function pluck($arr, $key) {
   }
 
   function ensure_user_is_authenticated() {
-      if (!is_user_authenticated()) {
-        redirect('login.php');
-        die();
-      }
+    if (!is_user_authenticated()) {
+      redirect('login.php');
+      die();
+    }
   }
